@@ -117,6 +117,7 @@ Check MySQL service running- nmap -p 3306 -iL ip.txt | grep open        (ip.txt 
 ```
 User Enumeration : wpscan --url https://example/ --enumerate u
 Bruteforce: wpscan --url https://example/ --passwords wordlist.txt --usernames samson
+wpscan --url https://hospitalmarcelino.com.br -e at --random-user-agent --api-token LUj8CFzb3m3YffuwsKM1QFoNb5hU2PQOypc8q5V8Xhw --disable-tls-checks
 ```
 
 # Hash Cat
