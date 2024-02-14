@@ -143,6 +143,12 @@ User Enumeration : wpscan --url https://example/ --enumerate u
 Bruteforce: wpscan --url https://example/ --passwords wordlist.txt --usernames samson
 wpscan --url https://hospitalmarcelino.com.br -e at --random-user-agent --api-token LUj8CFzb3m3YffuwsKM1QFoNb5hU2PQOypc8q5V8Xhw --disable-tls-checks
 ```
+# GREP
+```
+Aprenas 4 primeiras letras
+	-> grep -o '\b[a-z]\{4\}\b'
+
+```
 
 # Hash Cat
 ```
