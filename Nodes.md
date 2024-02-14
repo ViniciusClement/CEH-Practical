@@ -199,6 +199,8 @@ https://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
 john --list=formats 
 john --list=formats | grep -iF "md5"
 
+john --format=Raw-SHA1-AxCrypt --wordlist=/usr/share/wordlists/rockyou.txt hash2.txt
+
 Single crack mode: john --single --format=raw-sha1 crack.txt
 Crack the password in file using wordlist: john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.txt here contains the hashes)
 
