@@ -194,6 +194,8 @@ hydra -L [user] -P [password] [IP] http-post-form "/:usernam=^USER^ & password=^
 ```
 # John
 ```
+https://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
+
 john --list=formats 
 john --list=formats | grep -iF "md5"
 
