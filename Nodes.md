@@ -147,6 +147,7 @@ wpscan --url https://hospitalmarcelino.com.br -e at --random-user-agent --api-to
 # Hash Cat
 ```
 Dictionary Attack
+hashcat -m 0 -a 0 hash-1.txt /usr/share/wordlist/Rockyou/rockyou.txt --show
 
 hashcat -m 0 -a 0 -o cracked.txt target_hashes.txt /usr/share/wordlists/rockyou.txt
   -m 0 designates the type of hash we are cracking (MD5);
