@@ -145,8 +145,7 @@ wpscan --url https://hospitalmarcelino.com.br -e at --random-user-agent --api-to
 ```
 # GREP
 ```
-Aprenas 4 primeiras letras
-	-> grep -o '\b[a-z]\{4\}\b'
+Apenas 4 primeiras letras -> grep -o '\b[a-z]\{4\}\b'
 
 ```
 
