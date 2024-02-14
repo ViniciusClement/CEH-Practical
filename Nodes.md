@@ -151,6 +151,7 @@ Apenas 4 primeiras letras -> grep -o '\b[a-z]\{4\}\b'
 
 # Hash Cat
 ```
+https://gitlab.com/kalilinux/packages/hash-identifier/-/tree/kali/master
 https://crackstation.net/
 https://hashcat.net/wiki/doku.php?id=example_hashes
 https://www.tunnelsup.com/hash-analyzer/
