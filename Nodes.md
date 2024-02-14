@@ -148,6 +148,7 @@ wpscan --url https://hospitalmarcelino.com.br -e at --random-user-agent --api-to
 ```
 https://crackstation.net/
 https://hashcat.net/wiki/doku.php?id=example_hashes
+https://www.tunnelsup.com/hash-analyzer/
 
 Dictionary Attack
 hashcat -m 0 -a 0 hash-1.txt /usr/share/wordlist/Rockyou/rockyou.txt --show
