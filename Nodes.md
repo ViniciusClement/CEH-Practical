@@ -194,6 +194,9 @@ hydra -L [user] -P [password] [IP] http-post-form "/:usernam=^USER^ & password=^
 ```
 # John
 ```
+john --list=formats 
+john --list=formats | grep -iF "md5"
+
 Single crack mode: john --single --format=raw-sha1 crack.txt
 Crack the password in file using wordlist: john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.txt here contains the hashes)
 
