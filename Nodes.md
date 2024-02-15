@@ -215,6 +215,15 @@ unshadow local_passwd local_shadow > unshadowed.txt
 Single crack mode: john --single --format=raw-sha1 crack.txt
 Crack the password in file using wordlist: john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.txt here contains the hashes)
 
+Create a wordlist of Single Crack Mode file
+
+From
+1efee03cdcb96d90ad48ccc7b8666033
+To
+Joker:1efee03cdcb96d90ad48ccc7b8666033
+
+john --single --format=Raw-MD5 hash7.txt 
+
 Cracking service credentials like ssh
 1. First have to convert the hash file to JOHN format : ssh2john /home/text/.ssh/id_rsa > crack.txt (Now we need to crack this crack.txt file with John The Ripper)
 2. john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt
