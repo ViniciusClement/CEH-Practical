@@ -200,8 +200,9 @@ john --list=formats
 john --list=formats | grep -iF "md5"
 
 john --format=Raw-SHA1-AxCrypt --wordlist=/usr/share/wordlists/rockyou.txt hash2.txt
-
+_____
 Unshadow Mode
+
 FILE 1 - local_passwd
 Contains the /etc/passwd line for the root user:
 root:x:0:0::/root:/bin/bash
@@ -211,7 +212,7 @@ Contains the /etc/shadow line for the root user:
 root:$6$2nwjN454g.dv4HN/$m9Z/r2xVfweYVkrr.v5Ft8Ws3/YYksfNwq96UL1FX0OJjY1L6l.DS3KEVsZ9rOVLB/ldTeEL/OIhJZ4GMFMGA0:18576::::::
 
 unshadow local_passwd local_shadow > unshadowed.txt
-
+______
 Single crack mode: john --single --format=raw-sha1 crack.txt
 Crack the password in file using wordlist: john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.txt here contains the hashes)
 
@@ -223,7 +224,16 @@ To
 Joker:1efee03cdcb96d90ad48ccc7b8666033
 
 john --single --format=Raw-MD5 hash7.txt 
+______
+Create Custom Rules
 
+Custom rules are defined in the john.conf file,
+usually located in /etc/john/john.con
+
+https://www.openwall.com/john/doc/RULES.shtml
+
+[List.Rules:THMRules]
+______
 Cracking service credentials like ssh
 1. First have to convert the hash file to JOHN format : ssh2john /home/text/.ssh/id_rsa > crack.txt (Now we need to crack this crack.txt file with John The Ripper)
 2. john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt
@@ -231,6 +241,11 @@ Cracking service credentials like ssh
 To crack ZIP
 1. zip2john file.zip > crack.txt
 2. john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt
+
+To crack RAR
+1. rar2john rarfile.rar > rar_hash.txt
+2. john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt
+
 
 Notes:
 –wordlist can be written as -w also
