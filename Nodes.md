@@ -118,7 +118,8 @@ https://0ab7002a042b241e98520d250098005d.web-security-academy.net/filter?categor
 tcp.flags.syn == 1 and tcp.flags.ack == 0    (How many machines) or Go to statistics IPv4 addresses--> Source and Destination ---> Then you can apply the filter given
 tcp.flags.syn == 1   (Which machine for dos)
 http.request.method == POST   (for passwords) or click tools ---> credentials
-Also
+
+https://wiki.wireshark.org/CaptureFilters
 ```
 # Find FQDN
 ```
