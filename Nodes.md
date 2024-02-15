@@ -201,6 +201,17 @@ john --list=formats | grep -iF "md5"
 
 john --format=Raw-SHA1-AxCrypt --wordlist=/usr/share/wordlists/rockyou.txt hash2.txt
 
+Unshadow Mode
+FILE 1 - local_passwd
+Contains the /etc/passwd line for the root user:
+root:x:0:0::/root:/bin/bash
+
+FILE 2 - local_shadow
+Contains the /etc/shadow line for the root user:
+root:$6$2nwjN454g.dv4HN/$m9Z/r2xVfweYVkrr.v5Ft8Ws3/YYksfNwq96UL1FX0OJjY1L6l.DS3KEVsZ9rOVLB/ldTeEL/OIhJZ4GMFMGA0:18576::::::
+
+unshadow local_passwd local_shadow > unshadowed.txt
+
 Single crack mode: john --single --format=raw-sha1 crack.txt
 Crack the password in file using wordlist: john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.txt here contains the hashes)
 
