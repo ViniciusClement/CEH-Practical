@@ -246,6 +246,7 @@ To crack RAR
 1. rar2john rarfile.rar > rar_hash.txt
 2. john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt
 
+unrar e secure.rar
 
 Notes:
 –wordlist can be written as -w also
