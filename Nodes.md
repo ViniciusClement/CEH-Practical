@@ -315,6 +315,10 @@ To find UDP Protocol :
 To find Mac Address :
 	arp.src.hw_mac == 80:fb:06:f0:45:d7
 
+To find DNS Queries :
+	dns.qry.name
+	dns.qry.name == 8.8.8.8.in-addr.arpa
+
 More reference: https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html
 
