@@ -287,6 +287,9 @@ SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
 To find DOS (SYN and ACK) :
 	tcp.flags.syn == 1  , tcp.flags.syn == 1 and tcp.flags.ack == 0
 
+To find ARP Request and ARP Reply:
+	arp.opcode == 1 or arp.opcode == 2
+
 To find passwords :
 	http.request.method == POST
 
@@ -301,6 +304,13 @@ To find SRC and DST :
 To find TCP Protocol :
 	tcp.port eq <Port #> or <Protocol Name>
 	tcp.port eq 80 or http
+
+To find UDP Protocol :
+	udp.port eq <Port #> or <Protocol Name>
+	udp.port eq 53 or dns
+
+To find Mac Address :
+	arp.src.hw_mac == 80:fb:06:f0:45:d7
 
 More reference: https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html
