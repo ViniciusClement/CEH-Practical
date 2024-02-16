@@ -286,7 +286,16 @@ SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
 ```
 To find DOS (SYN and ACK) : tcp.flags.syn == 1  , tcp.flags.syn == 1 and tcp.flags.ack == 0
 To find passwords : http.request.method == POST
+To find ip address : ip.addr == <IP Address>
+To find SRC and DST : ip.src == <SRC IP Address> and ip.dst == <DST IP Address>
+To findo TCP Protocol : tcp.port eq <Port #> or <Protocol Name>
+
+![image](https://github.com/ViniciusClement/CEH-Pratical/assets/42365610/8ca52442-d76f-40e6-84d7-210c3109acd6)
+
+
+
 More reference: https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
+https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html
 
 To find DOS: Look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port(As per question)
 ```
