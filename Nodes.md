@@ -290,6 +290,9 @@ To find DOS (SYN and ACK) :
 To find ARP Request and ARP Reply:
 	arp.opcode == 1 or arp.opcode == 2
 
+To find ICMP Request and ICMP Respose :
+	icmp.type == 0 or icmp.type == 8
+
 To find passwords :
 	http.request.method == POST
 
