@@ -319,6 +319,11 @@ To find DNS Queries :
 	dns.qry.name
 	dns.qry.name == 8.8.8.8.in-addr.arpa
 
+To find HTTP Queries :
+	http.request.full_uri
+	http.content_type
+
+
 More reference: https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html
 
