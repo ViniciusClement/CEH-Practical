@@ -468,10 +468,17 @@ Zone Transfer
 Zone Transfer on the internal zone named "int"
 	1. dig int @51.158.147.132 axfr
 
-int.                    604800  IN      SOA     int. internals. 2 604800 86400 2419200 604800
-int.                    604800  IN      NS      int.
-int.                    604800  IN      A       127.0.0.1
-recon_15.int.           604800  IN      TXT     "b55b45a8-63b1-42f7-bd12-a36219ff883d"
-int.                    604800  IN      SOA     int. internals. 2 604800 86400 2419200 604800
+	int.                    604800  IN      SOA     int. internals. 2 604800 86400 2419200 604800
+	int.                    604800  IN      NS      int.
+	int.                    604800  IN      A       127.0.0.1
+	recon_15.int.           604800  IN      TXT     "b55b45a8-63b1-42f7-bd12-a36219ff883d"
+	int.                    604800  IN      SOA     int. internals. 2 604800 86400 2419200 604800
 
+Find the version of Bind used
+	1. nslookup -q=txt -class=CHAOS version.bind z.hackycorp.com
+	2. dig -t txt -c chaos VERSION.BIND @51.158.147.132
+
+	Server:         z.hackycorp.com
+	Address:        51.158.147.132#53
+	version.bind    text = "4e5e76e1-728a-49be-aea8-4591ba11e588"
 ```
