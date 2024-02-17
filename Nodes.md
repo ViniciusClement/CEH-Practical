@@ -434,3 +434,22 @@ HOST HEADER
 	
 ```
 
+# Curl
+```
+	-I, --head: Fetch the headers only
+		curl -I https://hackycorp.com
+
+	-X, --request: Change the method to use when starting the transfer
+		curl -X GET https://hackycorp.com
+		curl -X "DELETE" https://example.com
+ 		curl -X NLST ftp://example.com/
+
+	
+	-H, --header: Extra header to include in information sent. When used within an HTTP request, it is added to the regular request headers
+		curl -H "X-First-Name: Joe" https://example.com
+ 		curl -H "User-Agent: yes-please/2000" https://example.com
+ 		curl -H "Host:" https://example.com
+ 		curl -H @headers.txt https://example.com
+		for i in $(cat "/usr/share/wordlist/SecLists/Discovery/DNS/fierce-hostlist.txt"); do curl -H "Host: $i.hackycorp.com" https://hackycorp.com; done
+
+```
