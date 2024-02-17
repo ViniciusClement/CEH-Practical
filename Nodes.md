@@ -464,4 +464,7 @@ dig @server name type
 Zone Transfer
 	1. dig z.hakcycorp.com ns
 	2. dig @ns1.hackycorp.com z.hackycorp.com axfr
+
+Zone Transfer on the internal zone
+	dig int @51.158.147.132 axfr
 ```
