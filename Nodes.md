@@ -419,3 +419,18 @@ http://10.21.3.4/vulnerabilities/fi/?page=http://192.168.198.200/vinicius_clemen
 
 ```
 
+# Fuff
+```
+A fast web fuzzer written in Go
+
+GET parameter fuzzing
+	ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=test_value -fs 4242
+
+POST data fuzzing
+	ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" -u https://target/login.php -fc 401
+
+HOST HEADER
+	ffuf -u https://hackycorp.com -t 100 -H "Host: FUZZ.hackycorp.com" -w /usr/share/wordlist/SecLists/Discovery/DNS/fierce-hostlist.txt -fs 107
+	
+```
+
