@@ -465,6 +465,13 @@ Zone Transfer
 	1. dig z.hakcycorp.com ns
 	2. dig @ns1.hackycorp.com z.hackycorp.com axfr
 
-Zone Transfer on the internal zone
-	dig int @51.158.147.132 axfr
+Zone Transfer on the internal zone named "int"
+	1. dig int @51.158.147.132 axfr
+
+int.                    604800  IN      SOA     int. internals. 2 604800 86400 2419200 604800
+int.                    604800  IN      NS      int.
+int.                    604800  IN      A       127.0.0.1
+recon_15.int.           604800  IN      TXT     "b55b45a8-63b1-42f7-bd12-a36219ff883d"
+int.                    604800  IN      SOA     int. internals. 2 604800 86400 2419200 604800
+
 ```
