@@ -460,4 +460,8 @@ DNS lookup utility
 
 dig @server name type
 	dig @51.158.147.132 key.z.hackycorp.com TXT
+
+Zone Transfer
+	1. dig z.hakcycorp.com ns
+	2. dig @ns1.hackycorp.com z.hackycorp.com axfr
 ```
