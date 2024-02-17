@@ -481,4 +481,7 @@ Find the version of Bind used
 	Server:         z.hackycorp.com
 	Address:        51.158.147.132#53
 	version.bind    text = "4e5e76e1-728a-49be-aea8-4591ba11e588"
+
+	https://www.firewall.cx/operating-systems/linux-unix/linux-bind-introduction.html
+	https://packetpushers.net/blog/turning-bind-dns-management-into-a-walk-in-the-park/
 ```
