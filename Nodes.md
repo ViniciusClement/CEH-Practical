@@ -35,6 +35,23 @@ VeraCrypt
 		- https://veracrypt.eu/en/Beginner%27s%20Tutorial.html
 		- https://westoahu.hawaii.edu/it/ask-us/security/3612/
 
+Cracking Hashes
+	- https://hashes.com/en/decrypt/hash
+	- https://crackstation.net/
+
+BCTextEncoder
+
+1. Finde the Secret File.
+
+	-----BEGIN ENCODED MESSAGE-----
+	Version: BCTextEncoder Utility v. 1.00.7
+	
+	wy4ECQMCBT7mDgJPUqZgEN84FliE1dOrf7ak4qZLSON/usAbINzBaKJNpQCCDCCc
+	0jkBJZ/ZS2J0khqeDfN/7UiapxfksqSs4CH1eawz7BSbpxRLjK42dsMwf4g8n+ps
+	xHOAU3TdJD5SpnQ=
+	-----END ENCODED MESSAGE-----
+
+2. Decode Message with Password
 
 
 ```
