@@ -70,7 +70,8 @@ CrypTool
 
 	Decrypt
 		1. Encrypt/Decrypt > Symmetric (modern) > DES (ECB)
-
+		2. Encrypt/Decrypt > Symmetric (modern) > RC4 > Key lenght (14)
+	
 
 ```
 #  Sniffing
