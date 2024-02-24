@@ -143,6 +143,32 @@ https://0ab7002a042b241e98520d250098005d.web-security-academy.net/filter?categor
 2- adb connect IP:5555    (Connect adb with parrot)
 3- adb shell              (Access mobile device on parrot)
 4- pwd --> ls --> cd sdcard --> ls --> cat secret.txt (If you can't find it there then go to Downloads folder using: cd downloads)
+
+https://developer.android.com/studio/command-line/adb
+https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8
+https://devhints.io/adb
+https://3os.org/android/adb-cheat-sheet/#pulls-a-file-from-android-device
+
+		Basics
+adb devices	Lists connected devices
+adb devices -l	Lists connected devices and kind
+adb root	Restarts adbd with root permissions
+adb start-server	Starts the adb server
+adb kill-server	Kills the adb server
+adb remount	Remounts file system with read/write access
+adb reboot	Reboots the device
+adb reboot bootloader	Reboots the device into fastboot
+adb disable-verity	Reboots the device into fastboot
+
+		Remote Shell
+adb shell <command>	Runs the specified command on device (most unix commands work here)
+adb shell wm size	Displays the current screen resolution
+adb shell wm size WxH	Sets the resolution to WxH
+adb shell pm list packages	Lists all installed packages
+adb shell pm list packages -3	Lists all installed 3rd-party packages
+adb shell monkey -p app.package.name	Starts the specified package
+
+
 ```
 # Wireshark
 ```
