@@ -208,6 +208,17 @@ ls
 ./adb   pull     /sdcard/Download/magisk_patched.img       C:\platform-tools            (from android to pc)
  <            android location   >                      <pc location>
 
+Entropy
+	apt-get install ent
+	ent -h
+	ent evil.elf
+		-> Entropy =  3.1324653
+	
+	sha384sum eveil.elf
+		-> c7b24553683500c43eb6047af0f1bb25f8a19b16a72230ad5006f1c5cb5c7ad3e963554f9d2bf144e12b28745bf06347
+
+	Copy only 4 last word for hash
+		-> c7b24553683500c43eb6047af0f1bb25f8a19b16a72230ad5006f1c5cb5c7ad3e963554f9d2bf144e12b28745bf0 (6347)
 
 ```
 # Wireshark
