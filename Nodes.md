@@ -68,6 +68,9 @@ BCTextEncoder
 CrypTool
 	-https://www.cryptool.org/en/ct1/downloads
 
+	Decrypt
+		1. Encrypt/Decrypt > Symmetric (modern) > DES (ECB)
+
 
 ```
 #  Sniffing
