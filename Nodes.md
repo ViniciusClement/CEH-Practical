@@ -221,6 +221,11 @@ https://wiki.wireshark.org/CaptureFilters
 # Find FQDN
 ```
 nmap -p389 –sV -iL <target_list>  or nmap -p389 –sV <target_IP> (Find the FQDN in a subnet/network)
+
+FQDN = Host + Domain
+	Host: DC
+	Domain: pentest.com
+	FQDN = DC.pentest.com
 ```
 # Cracking Wi-Fi networks
 ```
