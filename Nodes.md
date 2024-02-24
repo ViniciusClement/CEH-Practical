@@ -193,6 +193,17 @@ aircrack-ng -a2 -b [Target BSSID] -w [password_Wordlist.txt] [WP2 PCAP file] (Fo
 ```
 Check RDP enabled after getting ip- nmap -p 3389 -iL ip.txt | grep open (ip.txt contains all the alive hosts from target subnet)
 Check MySQL service running- nmap -p 3306 -iL ip.txt | grep open        (ip.txt contains all the alive hosts from target subnet)
+
+telnet
+	user: root
+	password:
+ftp
+	user: anonymous
+	password:
+ftp
+	get
+	mget
+
 ```
 
 # WPSCAN
@@ -542,3 +553,4 @@ Find the version of Bind used
 	https://www.firewall.cx/operating-systems/linux-unix/linux-bind-introduction.html
 	https://packetpushers.net/blog/turning-bind-dns-management-into-a-walk-in-the-park/
 ```
+
