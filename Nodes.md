@@ -168,6 +168,23 @@ adb shell pm list packages	Lists all installed packages
 adb shell pm list packages -3	Lists all installed 3rd-party packages
 adb shell monkey -p app.package.name	Starts the specified package
 
+via USB
+./adb tcpip 5555
+./adb connect 192.168.43.117:5555
+./adb devices
+./adb  -d shell (Direct an adb command to the only attached USB device)
+ls
+cd sdcard
+ls
+cd dcim
+cd camera
+ls
+./adb   push                C:\platform-tools\ota.zip /sdcard/Download           (from pc to android)
+ <            pc location   >                  <android location>
+ 
+./adb   pull     /sdcard/Download/magisk_patched.img       C:\platform-tools            (from android to pc)
+ <            android location   >                      <pc location>
+
 
 ```
 # Wireshark
