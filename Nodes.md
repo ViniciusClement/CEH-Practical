@@ -695,7 +695,7 @@ Find the version of Bind used
 	https://packetpushers.net/blog/turning-bind-dns-management-into-a-walk-in-the-park/
 ```
 
-#Privilege Escalation
+# Privilege Escalation
 ```
 nmap -sV -p 22 192.168.0.1/24
 
