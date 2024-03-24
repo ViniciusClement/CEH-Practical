@@ -1,4 +1,13 @@
 # My ceh practical notes
+
+# Help Documents
+```
+https://book.thegurusec.com/certifications/certified-ethical-hacker-practical
+https://ceh-practical.cavementech.com/
+https://github.com/hunterxxx/CEH-v12-Practical
+https://github.com/System-CTL/CEH_CHEAT_SHEET/blob/main/Readme%20Carefully
+```
+
 #  Scanning Networks (always do sudo su)
 ```
 1- Nmap scan for alive/active hosts command for 192.189.19.18
