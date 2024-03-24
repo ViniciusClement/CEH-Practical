@@ -52,6 +52,7 @@ Command to find Users Accounts
 2- To Display Hidden Data- snow -C -p "magic" readme2.txt (then it will show the content of readme2.txt content)
 3- Image Stegnography using Openstego- PRACTICE ??
 	- https://github.com/syvaidya/openstego/releases
+	- https://www.openstego.com/
 
 VeraCrypt
 	- https://www.veracrypt.fr/en/Downloads.html
