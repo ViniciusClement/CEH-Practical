@@ -177,6 +177,7 @@ https://0ab7002a042b241e98520d250098005d.web-security-academy.net/filter?categor
 ```
 1- nmap ip -sV -p 5555    (Scan for adb port)
 2- adb connect IP:5555    (Connect adb with parrot)
+	adb connect 192.168.0.10:5555
 3- adb shell              (Access mobile device on parrot)
 4- pwd --> ls --> cd sdcard --> ls --> cat secret.txt (If you can't find it there then go to Downloads folder using: cd downloads)
 
