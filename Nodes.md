@@ -233,6 +233,7 @@ ls
  <            android location   >                      <pc location>
 
 Entropy
+	https://github.com/lsauer/entropy
 	apt-get install ent
 	ent -h
 	ent evil.elf
