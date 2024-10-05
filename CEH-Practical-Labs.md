@@ -201,6 +201,9 @@ Perform RPC, SMB, and FTP enumeration
             Perform SMB and RPC enumeration using NetScanTools Pro
             Perform RPC, SMB, and FTP enumeration using Nmap
 
+            smbclient //10.10.19.21/anonymous  (accessing smb shares)
+            smbget -R smb://10.10.19.21/anonymous   (downloading smb files)
+
 Perform enumeration using various enumeration tools
 
             Enumerate information using Global Network Inventory
