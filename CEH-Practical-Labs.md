@@ -447,7 +447,25 @@ Clear logs to hide the evidence of compromise
 Gain access to the target system using Trojans
 
             Gain control over a victim machine using the njRAT RAT Trojan
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Trojans Types\Remote Access Trojans (RAT)\njRAT and double-click njRAT v0.7d.exe.
+                        -> default port number 5552 has been chosen.
+                        -> click the Builder link
+                        -> enter the IP address of the Windows 11 (attacker machine) machine in the Host field
+                        -> Check the option Registy StarUp
+                        -> Save As
+                        -> Now, use any technique to send this server to the intended target through email or any other source (in real-time, attackers send this server to the victim).
+                        -> Double-click the server (Test.exe) to run this malicious executable.
+                        -> Right-click on the detected victim name and click Manager.
+
             Hide a Trojan using SwayzCryptor and make it undetectable to various anti-virus programs
+                        -> navigate to the location where you saved the malware file Test.exe
+                        -> Click Confirm upload on the VirusTotal page.
+                        -> Go to E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Crypters\SwayzCryptor and double-click SwayzCryptor.exe.
+                        -> Select a File dialog-box appears; navigate to the location of Test.exe (Desktop)            
+                        -> Once the file is selected, check the options Start up, Mutex, and Disable UAC, and then click Encrypt.
+                        -> The Save File CryptedFile.exe
+                        -> click the Upload file CryptedFile.exe on VirusTotal
+
             Create a Trojan server using Theef RAT Trojan
 
 Infect the target system using a virus
@@ -456,18 +474,140 @@ Infect the target system using a virus
 Perform static malware analysis
             Perform malware scanning using Hybrid Analysis
             Perform a strings search using BinText
+
             Identify packaging and obfuscation methods using PEid
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\Packaging and Obfuscation Tools\PEid and double-click PEiD.exe.
+                        -> Browse button to upload a malicious file for analysis
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses\Klez Virus Live!, select the face.exe file, and click Open.
+
             Analyze ELF executable file using Detect It Easy (DIE)
+                        The Executable and Linkable Format (ELF) is a generic executable file format in Linux environment. It contains three main components including ELF header, sections, and segments.
+
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\Packaging and Obfuscation Tools\DIE
+                        -> Open File
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses, select ELF Test File, and click Open.
+                        -> File info button from the top right corner of the window. Info window appears, you can observe information such as
+                                    -> File name, size, MD5, SHA1, Entropy, entry points, etc
+                        -> Click Entropy
+
             Find the portable executable (PE) information of a malware executable file using PE Explorer
+                        The Portable Executable (PE) format is the executable file format used on Windows OSes that stores the information a Windows system requires to manage the executable code.
+                        The PE stores metadata about the program, which helps in finding additional details of the file.
+                        For instance, the Windows binary is in PE format that consists of information such as time of creation and modification, import and export functions, compilation time, DLLs, and linked                             files, as well as strings, menus, and symbols.
+            
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\PE Extraction Tools\PE Explorer and double-click PE.Explorer_setup.exe.
+                        -> File and click Open File
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses\Klez Virus Live!. Select the face.exe
+                        -> Session Data Directories
+                        -> Session Headers
+
+
             Identify file dependencies using Dependency Walker
+                        Any software program depends on the various inbuilt libraries of an OS that help in performing specified actions in a system.
+                        Programs need to work with internal system files to function correctly. Programs store their import and export functions in a kernel32.dll file.
+                        File dependencies contain information about the internal system files that the program needs to function properly; this includes the process of registration and location on the machine.
+                        Find the libraries and file dependencies, as they contain information about the run-time requirements of an application.
+                        Then, check to find and analyze these files to provide information about the malware in the file.
+                        File dependencies include linked libraries, functions, and function calls. Check the dynamically linked list in the malware executable file.
+                        Finding out all library functions may allow guessing about what the malware program can do. You should know the various DLLs used to load and run a program.
+
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\File Dependency Checking Tools\Dependency Walker, and double-click depends.exe
+                        -> File and click Open to import the malicious file
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses\Klez Virus Live!. Select the snoopy.exe file and click Open.
+                        -> Shrink the .DLL nodes to view all available DLLs for the malicious file.
+            
             Perform malware disassembly using IDA and OllyDbg
-            Perform malware disassembly using Ghidra
+                        IDA As a disassembler, IDA explores binary programs, for which the source code might not be available, to create maps of their execution
+                        OllyDbg is a debugger that emphasizes binary code analysis, which is useful when source code is unavailable.
+                        It traces registers, recognizes procedures, API calls switches, tables, constants, and strings, and locates routines from object files and libraries.
+]
+                        -> IDA: Quick start pop-up appears; click on New to select a malicious file for disassembly.
+                        -> Select file to disassemble window.
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses\Klez Virus Live!, select face.exe, and click Open.
+                        -> By default, the Portable executable for 80386 (PE) [pe64.dll] option selected; click OK.
+                        -> Right-click anywhere and choose Text view
+                        -> navigate to E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\Disassembling and Debugging Tools\IDA
+                        -> Copy the qwingraph.exe file and paste it in IDA’s installation location. In this task, the location is C:\Program Files\IDA Freeware 7.7.
+                        -> navigate to View --> Graphs and click Flow chart.
+                        -> Click the HexView-1 tab to view the hex value of the malicious file.
+                        -> Click the Structures tab to view the structure of the file, as shown in the screenshot.
+
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\Disassembling and Debugging Tools\OllyDbg and double-click OLLYDBG.EXE.
+                        -> Choose File from the menu bar, and then choose Open.
+                        -> The Open 32-bit executable window appears; navigate to E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses, select tini.exe, and click Open.
+                        -> Choose View in the menu bar, and then choose Log
+                        -> Choose View in the menu bar, and then choose Executable modules.
+                        -> In this task, we are choosing the apphelp.dll module. The results might differ when you perform this task.
+                        -> Choose View in the menu bar, and then choose Memory.
+                        
+
+                        What is the first subroutine function identified by IDA?
+                                    -> sub_401000
+
+
+            Perform malware disassembly using Ghidra (https://www.varonis.com/blog/how-to-use-ghidra)
+
+                        Ghidra is a software reverse engineering (SRE) framework that includes a suite of full-featured,
+                        high-end software analysis tools that enable users to analyze compiled code on a variety of platforms including Windows, MacOS, and Linux.
+
+                        -> Navigate to E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Static Malware Analysis Tools\Disassembling and Debugging Tools\Ghidra and double-click ghidraRun.bat.
+                        -> Ghidra: NO ACTIVE PROJECT window appears, click File and select New Project….
+                        -> Non-Shared Project and click Next
+                        -> enter the Project Name as Malware Analysis and click Finish.
+                        -> Now, navigate to File --> Import File…
+                        -> Select File to Import window appears, navigate to E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Viruses\Klez Virus Live!, select face.exe
+                        -> click OK
+                        -> Double-click Face.exe node.
+                        -> Analyze pop-up appears, click Yes.
+                        -> click Analyze.
+                        -> Program Tree, double-click Headers 
+
+                        Use Ghidra to perform malware disassembly and find out the compiler ID of face.exe file?
+                                    -> Windows
+
 
 Perform dynamic malware analysis
             Perform port monitoring using TCPView and CurrPorts
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Trojans Types\Remote Access Trojans (RAT)\njRAT and double-click njRAT v0.7d.exe
+                        -> click the Builder link
+                        -> Enter the IP address of the Windows 11 (attacker machine) machine in the Host field
+                        -> Check the option Registy StarUp, rename ExeName as Trojan.exe
+                        -> Save As window appears, E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Trojans Types\Remote Access Trojans (RAT)\njRAT. In the File name, enter Trojan.exe and click Save. Done!
+
+                        -> switch to the Windows Server 2022 machine
+                        -> Navigate to Z:\CEHv12 Module 07 Malware Threats\Trojans Types\Remote Access Trojans (RAT)\njRAT and double-click Trojan.exe.
+                        -> Navigate to Z:\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Dynamic Malware Analysis Tools\Port Monitoring Tools\TCPView
+                        -> Double-click Tcpview.exe
+                        -> Now search for the Trojan.exe process in the TCPView.
+
+
+                        -> Navigate to Z:\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Dynamic Malware Analysis Tools\Port Monitoring Tools\CurrPorts and
+                        -> Double-click cports.exe.
+                        -> Now search for the Trojan.exe process in the CurrPorts.
+                        -> Double-click Trojan.exe and view the properties
+
             Perform process monitoring using Process Monitor
+                        -> Z:\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Dynamic Malware Analysis Tools\Process Monitoring Tools\ProcessMonitor and
+                        -> double-click Procmon.exe 
+                        -> right-click on the process and select Properties Trojan.exe
+
             Perform registry monitoring using Reg Organizer
+                        Registry monitoring tools such as Reg Organizer provide a simple way to track registry modifications, which is useful in troubleshooting and monitoring background changes.
+
+                        -> E:\CEH-Tools\CEHv12 Module 07 Malware Threats\Malware Analysis Tools\Dynamic Malware Analysis Tools\Registry Monitoring Tools\Reg Organizer
+                        -> Double-click reg-organizer-setup.exe
+                        -> click TOOLS from the menu bar and select Registry Snapshots
+                        -> Create Snapshot option
+                        -> Once the installation is complete, uncheck the Launch SoftPerfect Network Scanner option and click Finish.
+                        -> click Compare with Current Registry option to compare the changes in the registry entries before and after installing SoftPerfect Network Scanner application
+
             Perform Windows services monitoring using Windows Service Manager (SrvMan)
+                        You can trace malicious services initiated by the suspect file during dynamic analysis by using Windows service monitoring tools such as Windows Service Manager (SrvMan),
+                        which can detect changes in services and scan for suspicious Windows services.
+
+                        -> 
+
+
             Perform startup program monitoring using Autoruns for Windows and WinPatrol
             Perform installation monitoring using Mirekusoft Install Monitor
             Perform files and folder monitoring using PA File Sight
@@ -1084,4 +1224,4 @@ Port Mapping
 
 ![image](https://github.com/user-attachments/assets/76899df8-b89d-4564-8e78-d4e0f552de24)
 
-
+![2022-04-05_18-08-01](https://github.com/user-attachments/assets/f79743e6-f4d9-4e25-90ad-955322524d44)
