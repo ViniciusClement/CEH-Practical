@@ -1,3 +1,50 @@
+# Dicas
+```
+agora temos 3 redes no novo ceh practical
+
+invadir o windows por ms17-010 (privilege escalation)
+ler o arquivo da maquina windows
+
+acessar o samba do servidor por meio do file explorer
+smb://
+
+alterar parametro GET da aplicacao moviescope.com pegando data de niver do usuario john
+view profile
+
+IOT/OT - lab2 ilabs
+dava um arquivo pcap, aonde tem o protocolo MQTT, encontrar o pacote
+pois a flag eh o tamanho da mensagem MQTT que se encontra  dentro do pacote
+
+MQTT
+Port 1883 is the default MQTT port; 1883 is defined by IANA as MQTT over TCP.
+usar wireshark
+
+CRYPTO
+a) uma crypto ntlm do windows lajogar crackstation online
+
+b) hd encriptado, use uma ferramenta para extrair a flag dentro do hd
+montar com o veracrypt
+
+STEGO
+entrar no windows com uma credencial valida que eles dao
+la temos imagens com stegnanografia, achar qual imagem que eh usando a ferramenta OPENSTEGO
+desesteganografar e a senha: imagination
+
+QUEBRA DE SENHA
+
+ftp com hydra
+
+wifi
+eh entregue um pcap com o wordlist
+quebrar a senha do wifi usando o aircrack como na aula
+
+ANDROID
+descobrir um android na rede, comprometer ele e pegar a flag
+map -sV -p 5555 --open x.x.x.x/24
+conectar com phonesploit
+```
+
+
 # Lab 1 - Footprint and Reconnaissence
 ```
 Lab Tasks
