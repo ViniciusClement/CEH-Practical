@@ -1,5 +1,7 @@
 # Dicas
 ```
+https://github.com/hunterxxx/CEH-v12-Practical?authuser=0
+
 agora temos 3 redes no novo ceh practical
 
 invadir o windows por ms17-010 (privilege escalation)
