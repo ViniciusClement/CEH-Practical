@@ -1,74 +1,3 @@
-# Dicas
-```
-https://github.com/hunterxxx/CEH-v12-Practical?authuser=0
-
-agora temos 3 redes no novo ceh practical
-
-invadir o windows por ms17-010 (privilege escalation)
-ler o arquivo da maquina windows
-
-acessar o samba do servidor por meio do file explorer
-smb://
-
-alterar parametro GET da aplicacao moviescope.com pegando data de niver do usuario john
-view profile
-
-IOT/OT - lab2 ilabs
-dava um arquivo pcap, aonde tem o protocolo MQTT, encontrar o pacote
-pois a flag eh o tamanho da mensagem MQTT que se encontra  dentro do pacote
-
-MQTT
-Port 1883 is the default MQTT port; 1883 is defined by IANA as MQTT over TCP.
-usar wireshark
-
-CRYPTO
-a) uma crypto ntlm do windows lajogar crackstation online
-
-b) hd encriptado, use uma ferramenta para extrair a flag dentro do hd
-montar com o veracrypt
-
-STEGO
-entrar no windows com uma credencial valida que eles dao
-la temos imagens com stegnanografia, achar qual imagem que eh usando a ferramenta OPENSTEGO
-desesteganografar e a senha: imagination
-
-QUEBRA DE SENHA
-
-ftp com hydra
-
-wifi
-eh entregue um pcap com o wordlist
-quebrar a senha do wifi usando o aircrack como na aula
-
-ANDROID
-descobrir um android na rede, comprometer ele e pegar a flag
-map -sV -p 5555 --open x.x.x.x/24
-conectar com phonesploit
-
-
-1. Rodar nmap buscando a porta 3306 e após rodar nmap -O pra obter o SO
-2. Logar na máquina windows usando rdp e usar o comando net user /domain para identificar o usuário adicionado
-3. Cryptool para cifra DES(ECB) e ftp para máquina com flag1.txt
-4. SNOW no arquivo encriptado
-5. DVWA (ir na pasta dvwa/hackable/uploads e ler o arquivo txt)
-6. Rdp na máquina 27
-7. Comparar hashes dos arquivos com os salvos, usando HashCalc
-8. Obter hash MD5 do arquivo e jogar na url dada
-9. Cryptool com RC4
-10. Olhar wp-config, logar no banco, pegar o hash e quebrar com John
-11. Wireshark DOS (Olhar Statistics) e indicar o atacante
-12. Ftp com Hydra usando Admin para pegar flag.txt
-13. Wireshark DDOS (Olhar Statistics) e indicar quantas máquinas estavam
-14. Montar um container com veracrypt e obter o arquivo dentro do container
-15. Password Wireshark http.method.request==POST e identificar o usuário e senha passados em claro
-16. BCTextEncoder Decrypt para obter a flag
-17. Nmap -p 5555 Phonesploit e pegar o account number no SDcard
-18. Método Vulnerável ZAP (POST)
-19. SNOW no outro arquivo
-20. Blind SQL com parameter tampering
-```
-
-
 # Lab 1 - Footprint and Reconnaissence
 ```
 Lab Tasks
@@ -271,9 +200,6 @@ Perform RPC, SMB, and FTP enumeration
 
             Perform SMB and RPC enumeration using NetScanTools Pro
             Perform RPC, SMB, and FTP enumeration using Nmap
-
-            smbclient //10.10.19.21/anonymous  (accessing smb shares)
-            smbget -R smb://10.10.19.21/anonymous   (downloading smb files)
 
 Perform enumeration using various enumeration tools
 
